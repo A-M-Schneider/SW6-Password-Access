@@ -1,0 +1,8 @@
+{
+    "title": "Login",
+    "input": {
+        "label": "Enter password:",
+        "placeholder": "Enter password ..."
+    },
+    "button": "Send"
+}

@@ -1,0 +1,8 @@
+{
+    "title": "Login",
+    "input": {
+        "label": "Password eingeben:",
+        "placeholder": "Password eingeben ..."
+    },
+    "button": "Abschicken"
+}

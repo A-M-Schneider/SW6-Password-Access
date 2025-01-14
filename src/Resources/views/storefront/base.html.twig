@@ -1,0 +1,39 @@
+{% sw_extends '@Storefront/storefront/base.html.twig' %}
+
+{% set hidePricesConfig = config('AmsPasswordAccess') %}
+{% set openRoutes = hidePricesConfig.config.exclude|split('\n') %}
+{% set currentRoute = page.header.navigation.active.id %}
+{% if currentRoute in openRoutes %}
+    {% set opened = true %}
+{% else %}
+    {% set opened = false %}
+{% endif %}
+
+
+{% block base_header_inner %}
+    {% if opened %}
+        <div class="container">
+            <div class="row align-items-center header-row">
+                {% block layout_header_logo %}
+                    <div class="col-12 col-lg-auto header-logo-col">
+                        {% sw_include '@Storefront/storefront/layout/header/logo.html.twig' %}
+                    </div>
+                {% endblock %}
+            </div>
+        </div>
+    {% else %}
+        {{ parent() }}
+    {% endif %}
+{% endblock %}
+
+{% block base_navigation %}
+     {% if not opened %}
+        {{ parent() }}
+    {% endif %}
+{% endblock %}
+
+{% block base_offcanvas_navigation %}
+    {% if not opened %}
+        {{ parent() }}
+    {% endif %}
+{% endblock %}

@@ -1,0 +1,40 @@
+{% sw_extends '@Storefront/storefront/base.html.twig' %}
+
+{% block base_header_inner %}
+    <div class="container">
+        <div class="row align-items-center header-row">
+            {% block layout_header_logo %}
+                <div class="col-12 col-lg-auto header-logo-col">
+                    {% sw_include '@Storefront/storefront/layout/header/logo.html.twig' %}
+                </div>
+            {% endblock %}
+        </div>
+    </div>
+{% endblock %}
+
+{% block base_navigation %}{% endblock %}
+
+{% block base_offcanvas_navigation %}{% endblock %}
+
+{% block base_main %}
+    <main class="content-main d-flex align-items-center">
+        <div class="container">
+            <div>
+                {{ text | raw }}
+            </div>
+            <form method="POST">
+                <div class="form-row">
+                    <div class="form-group col-md-4 m-auto">
+                        <label class="form-label" for="form-password">{{ 'input.label' | trans }}</label>
+                        <input name="password" id="form-password" type="password" placeholder="{{ 'input.placeholder' | trans }}" required="required" class="form-control"/>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-4 mt-1 m-auto d-flex justify-content-end">
+                        <button type="submit" class="btn btn-primary">{{ 'button' | trans }}</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </main>
+{% endblock %}

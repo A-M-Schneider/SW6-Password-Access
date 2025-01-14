@@ -1,0 +1,23 @@
+{
+  "name": "ams/password-access",
+  "description": "Skeleton plugin",
+  "type": "shopware-platform-plugin",
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "AmsPasswordAccess\\": "src/"
+    }
+  },
+  "authors": [
+    {
+        "name": "André-Maurice Schneider"
+    }
+  ],
+  "extra": {
+    "shopware-plugin-class": "AmsPasswordAccess\\AmsPasswordAccess",
+    "label": {
+      "de-DE": "Zugriff via Password",
+      "en-GB": "Access via password"
+    }
+  }
+}

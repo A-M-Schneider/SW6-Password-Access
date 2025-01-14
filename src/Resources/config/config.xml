@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/shopware/platform/trunk/src/Core/System/SystemConfig/Schema/config.xsd">
+    <card>
+        <input-field type="text-editor">
+            <name>text</name>
+            <label>Text above password</label>
+            <label lang="de-DE">Infobox über dem Password</label>
+        </input-field>
+        <input-field type="password">
+            <name>password</name>
+            <label>Access Password</label>
+            <label lang="de-DE">Zugriffspassword</label>
+        </input-field>
+        <input-field type="textarea">
+            <name>exclude</name>
+            <label>Exclude pages from blocking (New line &lt;=&gt; New Route/Category-ID)</label>
+            <label lang="de-DE">Seiten von der Sperrung ausschließen (Neue Zeile &lt;=&gt; Neue Route/Kategorie-ID)</label>
+        </input-field>
+    </card>
+</config>
